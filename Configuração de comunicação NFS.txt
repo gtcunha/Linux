@@ -7,8 +7,8 @@ Laboratório:
 
 PROCEDIMENTOS:
 
-1º - Realizar as configurações no Truenas. Nesse caso, foi criado um comaprtilhamento direto do POOL "DATA-BACKUP", com todo o volume dos discos. Outra opção, seria criar data sets ou criar
-pools menores;
+1º - Realizar as configurações no Truenas. Nesse caso, foi criado um comaprtilhamento direto no dataset "DATA-BACKUP", com todo o volume dos discos. Outra opção, seria criar volumes ou criar
+datasets menores;
 
 2º - Instalar o pacote "nfs-common";
 
