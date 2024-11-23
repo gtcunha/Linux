@@ -1,0 +1,19 @@
+// Configuração de comunicação NFS 
+
+Laboratório:
+
+1 servidor Ubuntu;
+1 truenas;
+
+PROCEDIMENTOS:
+
+1º - Realizar as configurações no Truenas. Nesse caso, foi criado um comaprtilhamento direto do POOL "DATA-BACKUP", com todo o volume dos discos. Outra opção, seria criar data sets ou criar
+pools menores;
+
+2º - Instalar o pacote "nfs-common";
+
+3º - Criar o diretório que receberá o compartilhamento;
+
+4º - Montar o NFS -> mount 172.16.0.2:/mnt/DATA-BACKUP /mnt/backup
+
+5º - Editar o arquivo FSTAB para que o endereço fique permanente;
