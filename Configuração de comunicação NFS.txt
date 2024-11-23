@@ -16,4 +16,11 @@ datasets menores;
 
 4º - Montar o NFS -> mount 172.16.0.2:/mnt/DATA-BACKUP /mnt/backup
 
-5º - Editar o arquivo FSTAB para que o endereço fique permanente;
+5º - Editar o arquivo FSTAB para que o endereço fique permanente:
+
+    172.16.0.2:/mnt/DATA-BACKUP /mnt/backup nfs rw,sync  0 0
+
+Observações:
+
+- Não esqueça de configurar as opções "Maproot User" como root e a opção "Maproot Group" como Wheel. Sem isso, não será possível utilizar compartilhamento no servidor, pois, ao criar/salvar 
+arquivos aparecerá a informação de "Permissão Negada". Essas configurações ficam em Shares, opções avançadas no Truenas;
