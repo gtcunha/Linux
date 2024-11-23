@@ -1,0 +1,10 @@
+// Liberar acesso do ROOT via SSH
+
+- Editar o arquivo /etc/ssh/sshd_config e adicionar as linhas abaixo:
+
+    PermitRootLogin yes
+    PasswordAuthentication yes
+
+- Salvar o arquivo;
+
+- Reiniciar o serviço SSHD -> systemctl restart sshd
