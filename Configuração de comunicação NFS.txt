@@ -24,3 +24,5 @@ Observações:
 
 - Não esqueça de configurar as opções "Maproot User" como root e a opção "Maproot Group" como Wheel. Sem isso, não será possível utilizar compartilhamento no servidor, pois, ao criar/salvar 
 arquivos aparecerá a informação de "Permissão Negada". Essas configurações ficam em Shares, opções avançadas no Truenas;
+
+FIM
