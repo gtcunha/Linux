@@ -3,7 +3,7 @@
 
 apt install apache2
 systemctl enable apache2
-apt install maridadb-server-y
+apt install maridadb-server -y
 mysql_secure_installation
 apt install php libapache2-mod-php php-mysql
 apt install php-{curl,mbstring,bcmath,common,gd,xml,fpm}
@@ -11,7 +11,7 @@ apt install php-{curl,mbstring,bcmath,common,gd,xml,fpm}
 mysql -u root -p
 
     create database teampass_db;
-    grand all privileges on teampass_db.* to teampass_user@localhost identified by "teampass_password";
+    grant all privileges on teampass_db.* to teampass_user@localhost identified by "teampass_password";
     flush privileges;
     \q
 
