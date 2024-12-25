@@ -1,0 +1,1 @@
+sudo mount -t cifs //IP_DO_SERVIDOR/NOME_DO_COMPARTILHAMENTO /mnt/compartilhamento -o username=SEU_USUARIO,password=SUA_SENHA

@@ -18,9 +18,21 @@ mysql -u root -p
 git clone https://github.com/nilsteampassnet/TeamPass.git
 rm -rf /var/www/html/index.html
 mv TeamPass/* /var/www/html
-chown -R www-data www-data /var/www/html/
+chown -R www-data.www-data /var/www/html/
 vim /etc/php7.2/apache2/php.ini
 
     max_execution_time = 60
 
-systemcrl restart apache2
+systemctl restart apache2
+
+## Configurações do TeamPass
+
+Teampass set-up
+
+Teampass administration password: passw0rd
+
+No primeiro acesso deve-se habilitar e configurar o Cron, existe uma opção em Tasks que realiza a ação automaticamente;
+
+OBS: o módulo "Secure Folder is avaliable" só é habilitado se o dono e o grupo da pasta /var/teampass estiverem como www-data.
+
+Habilitar o site: a2ensite teampass.conf

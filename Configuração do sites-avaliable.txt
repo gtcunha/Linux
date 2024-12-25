@@ -1,0 +1,22 @@
+## Configuração do sites-avaliable
+
+Criar o arquivo teampass.conf no caminho /etc/apache2/sites-avaliable
+
+<VirtualHost *:80>
+    ServerAdmin admin@seudominio.com
+    ServerName teampass.seudominio.com
+    ServerAlias www.teampass.seudominio.com
+
+    DocumentRoot /var/www/html/teampass
+
+    <Directory /var/www/html/teampass>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/teampass_error.log
+    CustomLog ${APACHE_LOG_DIR}/teampass_access.log combined
+</VirtualHost>
+
+a2ensite teampass.conf - comando para habilitar o arquivo teampass.conf
