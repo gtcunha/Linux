@@ -1,0 +1,14 @@
+## Configuração da comunicação do servidor de banco de dados com o servidor de aplicação - MariaDB
+
+- Alterar o arquivo /var/www/html/teampass/includes/config/settings.php:
+
+    Alterar o parâmetro define("DB_HOST", "localhost"); para define("DB_HOST", "192.168.0.3");
+
+- Editar o arquivo /etc/mysql/mariadb.conf.d/50-server.cnf
+
+    Alterar o parâmetro bind-address = 127.0.0.1 para bind-address = 0.0.0.0 - dessa forma, será liberada a comunicação do banco de dados com servidores externos.
+
+- systemctl restart mysql;
+
+
+
